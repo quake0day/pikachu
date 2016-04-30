@@ -74,7 +74,7 @@ def getFileList(rootDIR):
         picker = Picker(f, title, indicator='=>')
         picker.register_custom_handler(curses.KEY_LEFT,  go_back)
         option2, index2 = picker.start()
-        print option2
+        #print option2
         # run autograding 
         print option+option2
         autoGrading(option+"/"+option2)
@@ -231,7 +231,7 @@ def compileFile(file, customTag="a"):
     testFile = file[1][0] + file[1][1]
     p = sub.call(['iverilog', moduleFile, testFile, '-o', rootDIR+"out"])
     #output, errors = p.communicate()
-    q = sub.Popen(['vvp', './a.out'], stdout=sub.PIPE, stderr=sub.PIPE)
+    q = sub.Popen(['vvp', './out'], stdout=sub.PIPE, stderr=sub.PIPE)
     output, errors = q.communicate()
     sleep(3)
     return output  
