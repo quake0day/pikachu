@@ -1,21 +1,27 @@
 # pikachu
+
 Automatic grading script created by Si Chen
 
 
 
 ##How to use it (Timberlake)
 
-1. Copy all students homework submissions to your Timberlake folder
-2. Copy this repo to that folder 
+1. Clone this repo to your home folder 
 	
-		git clone 
+		git clone https://github.com/quake0day/pikachu.git
 		
-	
-5. Run (the) grading script
+		cd pikachu
 
-		python grading.py
+2. Copy all students homework submissions to that folder
 		
-6. The running result for each student will be in ./res folder
+		cp -r /submit/bina/CSE241/* ./
+	
+	
+3. Run (the) grading script
+
+		python2 grading.py
+		
+4. The running result for each student will be stored in ./res folder
 
 
 ##How to use it (Local OSX)
